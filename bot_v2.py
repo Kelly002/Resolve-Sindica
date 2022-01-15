@@ -32,24 +32,11 @@ CHAVE_API = '5074202239:AAHCwCgpd38-o3rOBCdQBmDXuvJePTTRckk'
 bot = telebot.TeleBot(CHAVE_API)
 
 # Traz as informações pessoais do usuário que está interagindo com o bot  #id=5060316690
-print(bot.get_me())
+#print(bot.get_me())
 
 #########################################################
-# Criação dos botões do Bot
-#########################################################
-# Função que trata das chaves e dos valores que vão para os botões do bot
-def makeKeyboard(perguntas_1):
-    markup = types.InlineKeyboardMarkup()
-    # print("Passou - " + perguntas_1)
-
-    for key, value in stringList.items():
-        if value != "":
-            markup.add(
-                types.InlineKeyboardButton(text=value, callback_data="['value', '" + value + "', '" + key + "']"))
-    return markup
-
-
 # Função que inicializa as apresentações dos botões com o comando "/ok"
+#########################################################
 @bot.message_handler(commands=['aqui'])
 def handle_command_adminwindow(message):
     msg = message.text
@@ -68,7 +55,7 @@ def financiamento(mensagem):
     bot.send_message(mensagem.chat.id, texto)
 
 
-# Função que trata do primeiro item que está dentro da primeira Opção apresentada pelo bot
+# Função que trata do segundo na primeira Opção apresentada pelo bot
 @bot.message_handler(commands=["reformas"])
 def reformas(mensagem):
     texto = """
@@ -77,7 +64,7 @@ def reformas(mensagem):
     bot.send_message(mensagem.chat.id, texto)
 
 
-# Função que trata do segundo item que está dentro da primeira Opção apresentada pelo bot
+# Função que trata do terceiro item que está Opção apresentada pelo bot
 @bot.message_handler(commands=["adm"])
 def adm(mensagem):
     texto = """
@@ -86,7 +73,7 @@ def adm(mensagem):
     bot.send_message(mensagem.chat.id, texto)
 
 
-# Função que trata do terceiro item que está dentro da primeira Opção apresentada pelo bot
+# Função que trata do quarto item que está dentro da primeira Opção apresentada pelo bot
 @bot.message_handler(commands=["mudancas"])
 def mudancas(mensagem):
     texto = """
