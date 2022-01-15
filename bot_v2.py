@@ -37,9 +37,10 @@ bot = telebot.TeleBot(CHAVE_API)
 #########################################################
 # Função que inicializa as apresentações dos botões com o comando "/ok"
 #########################################################
-@bot.message_handler(commands=['aqui'])
-def handle_command_adminwindow(message):
-    msg = message.text
+def main():
+    @bot.message_handler(commands=['aqui'])
+    def handle_command_adminwindow(message):
+        msg = message.text
 
 
 #########################################################
@@ -47,67 +48,69 @@ def handle_command_adminwindow(message):
 #########################################################
 
 # Função que trata da primeira Opção apresentada no menu do bot
-@bot.message_handler(commands=["financiamento"])
-def financiamento(mensagem):
-    texto = """
-    Boleto vencido acima de 30 dias, favor entrar em contato com o jurídico no telefone: +55 19 98388-4942
-    """
-    bot.send_message(mensagem.chat.id, texto)
+    @bot.message_handler(commands=["financiamento"])
+    def financiamento(mensagem):
+        texto = """
+        Boleto vencido acima de 30 dias, favor entrar em contato com o jurídico no telefone: +55 19 98388-4942
+        """
+        bot.send_message(mensagem.chat.id, texto)
 
 
 # Função que trata do segundo na primeira Opção apresentada pelo bot
-@bot.message_handler(commands=["reformas"])
-def reformas(mensagem):
-    texto = """
-    Se a sua reforma irá ter: Gesso, Troca de Azuleijo, Troca de Piso ou Blindx, favor chamar o Teia.
-    """
-    bot.send_message(mensagem.chat.id, texto)
+    @bot.message_handler(commands=["reformas"])
+    def reformas(mensagem):
+        texto = """
+        Se a sua reforma irá ter: Gesso, Troca de Azuleijo, Troca de Piso ou Blindx, favor chamar o Teia.
+        """
+        bot.send_message(mensagem.chat.id, texto)
 
 
 # Função que trata do terceiro item que está Opção apresentada pelo bot
-@bot.message_handler(commands=["adm"])
-def adm(mensagem):
-    texto = """
-    Entre em contato com a BrCondos no telefone: +55 19 3234-3420.
-    """
-    bot.send_message(mensagem.chat.id, texto)
+    @bot.message_handler(commands=["adm"])
+    def adm(mensagem):
+        texto = """
+        Entre em contato com a BrCondos no telefone: +55 19 3234-3420.
+        """
+        bot.send_message(mensagem.chat.id, texto)
 
 
 # Função que trata do quarto item que está dentro da primeira Opção apresentada pelo bot
-@bot.message_handler(commands=["mudancas"])
-def mudancas(mensagem):
-    texto = """
-    Grite pela Nathaly 😂.
-    """
-    bot.send_message(mensagem.chat.id, texto)
+    @bot.message_handler(commands=["mudancas"])
+    def mudancas(mensagem):
+        texto = """
+        Grite pela Nathaly 😂.
+        """
+        bot.send_message(mensagem.chat.id, texto)
 
-    bot.send_message(mensagem.chat.id, "Espero ter ajudado 😉")
+        bot.send_message(mensagem.chat.id, "Espero ter ajudado 😉")
 
 
 #########################################################
 # Verifica se existem novas mensagens no bot
 #########################################################
-def verificar(mensagem):
-    return True
+    def verificar(mensagem):
+        return True
 
 #########################################################
 # Mensagem de saudação
 #########################################################
-@bot.message_handler(func=verificar)
-def responder(mensagem):
-    #firstName = bot.messagem.from_user.first_name
-    texto = """Oi,+  firstName + 😃 tudo bem?\n
-       Qual é a sua dúvida 🤔🤔 ? \n
-       /financiamento Financiamento
-       /reformas reformas
-       /adm Administrativo
-       /mudancas Mudanças
-       Escolha uma das opções acima!!!
-        """
-    bot.send_message(mensagem.chat.id, text=texto)
+    @bot.message_handler(func=verificar)
+    def responder(mensagem):
+        #firstName = bot.messagem.from_user.first_name
+        texto = """Oi,+  firstName + 😃 tudo bem?\n
+           Qual é a sua dúvida 🤔🤔 ? \n
+           /financiamento Financiamento
+           /reformas reformas
+           /adm Administrativo
+           /mudancas Mudanças
+           Escolha uma das opções acima!!!
+            """
+        bot.send_message(mensagem.chat.id, text=texto)
 
 
-bot.polling()
+    bot.polling()
 
+if __name__ == "__main__":
+    main()
 
 
