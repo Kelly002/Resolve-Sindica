@@ -11,9 +11,16 @@
 #########################################################
 # !pip install pytelegrambotapi   instala a biblioteca do Telegram via terminal
 import telebot
-import ast
-
 from telebot import types
+import ast
+import requests
+from telegram.ext import (Updater, CommandHandler, MessageHandler, Filters,
+                          RegexHandler, ConversationHandler, CallbackQueryHandler)
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup
+
+
+
+
 
 #########################################################
 # Informações iniciais para a construção do bot
