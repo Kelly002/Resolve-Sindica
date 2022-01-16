@@ -69,9 +69,7 @@ def main():
 # Função que trata do terceiro item que está Opção apresentada pelo bot
     @bot.message_handler(commands=["adm"])
     def adm(mensagem):
-        texto = """
-        Favor entrar em contato com a BrCondos no telefone: +55 19 3234-3420.
-        """
+        texto = " Favor entrar em contato com a BrCondos no telefone: +55 19 3234-3420 "
         bot.send_message(mensagem.chat.id, texto)
 
 
