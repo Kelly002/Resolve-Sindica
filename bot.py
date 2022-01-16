@@ -58,7 +58,10 @@ def main():
     @bot.message_handler(commands=["reformas"])
     def reformas(mensagem):
         texto = """
-        Se a sua reforma irá ter: Gesso, Troca de Azuleijo, Troca de Piso ou Blindx, favor chamar o Teia.
+        Se a sua reforma precisa de Art, favor entrar em contato com o Engenheiro Miquéias, 
+        no telefone: +55 19 98840-7845.\n
+        Agora, se for algo mais simples, basta agendar o horário no app BRCondos, e enviar o print do 
+        serviço e dos dados para mim no whats +55 19 98839-3668.
         """
         bot.send_message(mensagem.chat.id, texto)
 
@@ -95,7 +98,7 @@ def main():
     @bot.message_handler(func=verificar)
     def responder(mensagem):
         #firstName = bot.messagem.from_user.first_name
-        texto = """Oi,+  firstName + 😃 tudo bem?\n
+          texto = """Oi,+  firstName + 😃 tudo bem?\n
            Qual é a sua dúvida 🤔🤔 ? \n
            /financeiro Financeiro
            /reformas Reformas
