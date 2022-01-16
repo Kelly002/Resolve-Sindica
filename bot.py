@@ -58,10 +58,8 @@ def main():
     @bot.message_handler(commands=["reformas"])
     def reformas(mensagem):
         texto = """
-        Se a sua reforma precisa de Art, favor entrar em contato com o Engenheiro Miquéias, 
-        no telefone: +55 19 98840-7845.\n
-        Agora, se for algo mais simples, basta agendar o horário no app BRCondos, e enviar o print do 
-        serviço e dos dados para mim no whats +55 19 98839-3668.
+        Se a sua reforma precisa de Art, favor entrar em contato com o Engenheiro Miquéias, no telefone: +55 19 98840-7845.\n
+        Agora, se for algo mais simples, basta agendar o horário no app BRCondos, e enviar o print do serviço e dos dados para mim no whats +55 19 98839-3668.
         """
         bot.send_message(mensagem.chat.id, texto)
 
