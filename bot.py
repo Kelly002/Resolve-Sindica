@@ -68,7 +68,7 @@ def main():
     @bot.message_handler(commands=["adm"])
     def adm(mensagem):
         texto = """
-        Entre em contato com a BrCondos no telefone: +55 19 3234-3420.
+        Favor entrar em contato com a BrCondos no telefone: +55 19 3234-3420.
         """
         bot.send_message(mensagem.chat.id, texto)
 
