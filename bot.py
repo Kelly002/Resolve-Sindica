@@ -58,7 +58,10 @@ def main():
     def reformas(mensagem):
         texto = """
         Se a sua reforma precisa de Art, Gesso, Troca de Azuleijo, Troca de Piso ou Blindx, favor entrar em contato com o Engenheiro Miquéias, no telefone: +55 19 98840-7845.\n
-        Agora, se for algo mais simples, basta agendar o horário no app BRCondos, e enviar o print do serviço e dos dados para mim.
+        Se a sua reforma precisa, Gesso, Troca de Azuleijo, Troca de Piso ou Blindx, você irá precisar de um ART, favor entrar em contato com um engenheiro.\n
+        Agora, se for algo mais simples, basta agendar o horário no app BRCondos, e enviar o print do serviço e dos dados para mim.o app BRCondos, e enviar o print do serviço e dos dados para mim.
+        """
+     
         """
         bot.send_message(mensagem.chat.id, texto)
 
