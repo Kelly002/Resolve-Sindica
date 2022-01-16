@@ -62,7 +62,6 @@ def main():
         Agora, se for algo mais simples, basta agendar o horário no app BRCondos, e enviar o print do serviço e dos dados para mim.o app BRCondos, e enviar o print do serviço e dos dados para mim.
         """
      
-        """
         bot.send_message(mensagem.chat.id, texto)
 
 
@@ -76,9 +75,7 @@ def main():
 # Função que trata do quarto item que está dentro da primeira Opção apresentada pelo bot
     @bot.message_handler(commands=["mudancas"])
     def mudancas(mensagem):
-        texto = """
-        Grite pela Nathaly 😂.
-        """
+        texto = "Grite pela Nathaly 😂."
         bot.send_message(mensagem.chat.id, texto)
 
         bot.send_message(mensagem.chat.id, "Espero ter ajudado 😉")
