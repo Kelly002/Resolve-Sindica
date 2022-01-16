@@ -95,14 +95,14 @@ def main():
 #########################################################
     @bot.message_handler(func=verificar)
     def responder(mensagem):
-        #firstName = bot.messagem.from_user.first_name
-          texto = """Oi,+  firstName + 😃 tudo bem?\n
-           Qual é a sua dúvida 🤔🤔 ? \n
-           /financeiro Financeiro
-           /reformas Reformas
-           /adm Administrativo
-           /mudancas Mudanças
-           Escolha uma das opções acima!!!
+      firstName = bot.messagem.from_user.first_name
+          texto = 'Oi',+  firstName + '😃 tudo bem?\n'
+           #"""Qual é a sua dúvida 🤔🤔 ? \n
+           #/financeiro Financeiro
+           #/reformas Reformas
+           #/adm Administrativo
+           #/mudancas Mudanças
+           #Escolha uma das opções acima!!!
             """
         bot.send_message(mensagem.chat.id, text=texto)
 
