@@ -102,7 +102,7 @@ def main():
            #/reformas Reformas
            #/adm Administrativo
            #/mudancas Mudanças
-           #Escolha uma das opções acima!!!
+           #Clique em uma das opções acima!!!
             """
         bot.send_message(mensagem.chat.id, text=texto)
 
