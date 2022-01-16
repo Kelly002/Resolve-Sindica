@@ -46,8 +46,8 @@ def main():
 #########################################################
 
 # Função que trata da primeira Opção apresentada no menu do bot
-    @bot.message_handler(commands=["1"])
-    def 1(mensagem):
+    @bot.message_handler(commands=["financeiro"])
+    def financeiro(mensagem):
         texto = """
         Boleto vencido acima de 30 dias, favor entrar em contato com o jurídico no telefone: +55 19 98388-4942
         """
@@ -55,8 +55,8 @@ def main():
 
 
 # Função que trata do segundo na primeira Opção apresentada pelo bot
-    @bot.message_handler(commands=["2"])
-    def 2(mensagem):
+    @bot.message_handler(commands=["reformas"])
+    def reformas(mensagem):
         texto = """
         Se a sua reforma irá ter: Gesso, Troca de Azuleijo, Troca de Piso ou Blindx, favor chamar o Teia.
         """
@@ -64,8 +64,8 @@ def main():
 
 
 # Função que trata do terceiro item que está Opção apresentada pelo bot
-    @bot.message_handler(commands=["3"])
-    def 3(mensagem):
+    @bot.message_handler(commands=["adm"])
+    def adm(mensagem):
         texto = """
         Entre em contato com a BrCondos no telefone: +55 19 3234-3420.
         """
@@ -73,8 +73,8 @@ def main():
 
 
 # Função que trata do quarto item que está dentro da primeira Opção apresentada pelo bot
-    @bot.message_handler(commands=["4"])
-    def 4(mensagem):
+    @bot.message_handler(commands=["mudancas"])
+    def mudancas(mensagem):
         texto = """
         Grite pela Nathaly 😂.
         """
@@ -97,10 +97,10 @@ def main():
         #firstName = bot.messagem.from_user.first_name
         texto = """Oi,+  firstName + 😃 tudo bem?\n
            Qual é a sua dúvida 🤔🤔 ? \n
-           /1 Financiamento
-           /2 reformas
-           /3 Administrativo
-           /4 Mudanças
+           /financeiro Financeiro
+           /reformas Reformas
+           /adm Administrativo
+           /mudancas Mudanças
            Escolha uma das opções acima!!!
             """
         bot.send_message(mensagem.chat.id, text=texto)
