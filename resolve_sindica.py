@@ -1,4 +1,4 @@
-########################################################
+#########################################################
 # Este bot foi desenvolvido para o atendimento de um
 # sindico em  um condominio em Campinas.
 # Desenvolvido por Kelly M. O. Lopes
@@ -69,7 +69,7 @@ class TelegramBot:
         if eh_primeira_mensagem == True or mensagem.lower() in ('Na','na','nathy','nathaly','Nathy','Nathaly', 'oi', 'olá', 'o', 'bom dia', 'boa tarde', 'boa noite'):
             return f'''Oi tudo  bem 😃 ?
                     Por favor,  para agilizar digite uma das opções:
-                    1-Finaceiro 🤑
+                    1-Financeiro 🤑
                     2-Reformas 🛠
                     3-Mudanças 🚚
                     4-Salão de Festas 🎂
@@ -89,7 +89,8 @@ class TelegramBot:
 
         # Condição que trata do segundo iten oferecido pelo lista de opções do Bot
         if mensagem == '7':
-            return f'''Favor entrar em contato com o jurídico.'''
+            return f'''Favor entrar em contato com o jurídico.
+                    Fone: (19) 98388-4942'''
 
         # Condição que trata do terceiro iten oferecido pelo lista de opções do Bot
         if mensagem == '2':
@@ -101,7 +102,8 @@ class TelegramBot:
             return f''' Entre no app e agende a data da reforma. Após reservar, basta dar um print na tela e enviar para mim'''
         # Condição que trata do primeiro iten oferecido pelo lista de opções do Bot
         if mensagem == '8':
-            return f''' Entre em contato com o Engenheiro Miqueias, pois você irá precisar de um ART.'''
+            return f''' Entre em contato com o Engenheiro Miqueias, pois você irá precisar de um ART.
+                   Fone: (19) 98840-7845'''
 
         # Condição que trata do terceiro iten oferecido pelo lista de opções do Bot
         if mensagem == '3':
@@ -121,7 +123,7 @@ class TelegramBot:
 
         # Condição que trata do terceiro iten oferecido pelo lista de opções do Bot
         if mensagem == '13':
-            return f''' Basta enviar um email para grasieli.gomes@brcondos.com'''
+            return f''' Basta enviar o contrato assinado e reconhecido firma para o email grasieli.gomes@brcondos.com'''
 
         # Condição que trata do terceiro iten oferecido pelo lista de opções do Bot
         if mensagem == '11':
@@ -147,7 +149,8 @@ class TelegramBot:
         # Condição que trata do terceiro iten oferecido pelo lista de opções do Bot
         if mensagem == '5':
             return f''' Precisa de controle ou Tag?
-                        Ligue no número 200 do interfone. '''
+                        Ligue no número 200 do interfone. 
+                        Fone: (19) 99156-5872'''
 
     # Bot responde as perguntas do usuário
     def responder(self, resposta, chat_id):
