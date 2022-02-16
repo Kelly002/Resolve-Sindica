@@ -1,4 +1,4 @@
-#########################################################
+########################################################
 # Este bot foi desenvolvido para o atendimento de um
 # sindico em  um condominio em Campinas.
 # Desenvolvido por Kelly M. O. Lopes
@@ -73,76 +73,81 @@ class TelegramBot:
                     2-Reformas 🛠
                     3-Mudanças 🚚
                     4-Salão de Festas 🎂
+                    5- Portaria Virtual 👮🏽‍
                     '''
 
         # Condição que trata da primeira lista de opções oferecida pelo Bot
         if mensagem == '1':
             return f'''Boleto vencido até  30 dias?:
-                    5-Sim 
-                    6-Não 
+                    6-Sim 
+                    7-Não 
                     Digite um dos valores.'''
 
         # Condição que trata do primeiro iten oferecido pelo lista de opções do Bot
-        if mensagem == '5':
+        if mensagem == '6':
             return f''' Peça a segunda via pelo app.'''
 
         # Condição que trata do segundo iten oferecido pelo lista de opções do Bot
-        if mensagem == '6':
+        if mensagem == '7':
             return f'''Favor entrar em contato com o jurídico.'''
 
         # Condição que trata do terceiro iten oferecido pelo lista de opções do Bot
         if mensagem == '2':
             return f'''Vai trocar o piso, azulejo, ou colocar geso?
-                   7-Sim
-                   8-Não'''
+                   8-Sim
+                   9-Não'''
         # Condição que trata do primeiro iten oferecido pelo lista de opções do Bot
-        if mensagem == '8':
+        if mensagem == '9':
             return f''' Entre no app e agende a data da reforma. Após reservar, basta dar um print na tela e enviar para mim'''
         # Condição que trata do primeiro iten oferecido pelo lista de opções do Bot
-        if mensagem == '7':
+        if mensagem == '8':
             return f''' Entre em contato com o Engenheiro Miqueias, pois você irá precisar de um ART.'''
 
         # Condição que trata do terceiro iten oferecido pelo lista de opções do Bot
         if mensagem == '3':
             return f'''
-            9-Entrada no condomínio\n
-            10-Saída do condomínio'''
-
-        # Condição que trata do terceiro iten oferecido pelo lista de opções do Bot
-        if mensagem == '9':
-            return f''' Já enviou o contrato para o adm?
-              11- Sim
-              12-Não'''
-
-        # Condição que trata do terceiro iten oferecido pelo lista de opções do Bot
-        if mensagem == '11':
-            return f''' Basta esperar que eles entrem em contato. O prazo é de 72hs uteis.'''
-
-        # Condição que trata do terceiro iten oferecido pelo lista de opções do Bot
-        if mensagem == '12':
-            return f''' Basta enviar um email para grasieli.gomes@brcondos.com'''
+            10-Entrada no condomínio\n
+            11-Saída do condomínio'''
 
         # Condição que trata do terceiro iten oferecido pelo lista de opções do Bot
         if mensagem == '10':
+            return f''' Já enviou o contrato para o adm?
+              12- Sim
+              13-Não'''
+
+        # Condição que trata do terceiro iten oferecido pelo lista de opções do Bot
+        if mensagem == '12':
+            return f''' Basta esperar que eles entrem em contato. O prazo é de 72hs uteis.'''
+
+        # Condição que trata do terceiro iten oferecido pelo lista de opções do Bot
+        if mensagem == '13':
+            return f''' Basta enviar um email para grasieli.gomes@brcondos.com'''
+
+        # Condição que trata do terceiro iten oferecido pelo lista de opções do Bot
+        if mensagem == '11':
             return f''' Basta reservar a data no app.'''
 
         # Condição que trata do terceiro iten oferecido pelo lista de opções do Bot
         if mensagem == '4':
                 return f''' Quer agendar uma data para sua festa?
-                        13-Sim
-                        14- Mais informações sobre o salão'''
-
-        # Condição que trata do terceiro iten oferecido pelo lista de opções do Bot
-        if mensagem == '13':
-            return f''' Entre no app e agende a data. '''
+                        14-Sim
+                        15- Mais informações sobre o salão'''
 
         # Condição que trata do terceiro iten oferecido pelo lista de opções do Bot
         if mensagem == '14':
+            return f''' Entre no app e agende a data. '''
+
+        # Condição que trata do terceiro iten oferecido pelo lista de opções do Bot
+        if mensagem == '15':
             return f''' * Lotação máxima é de 60 pessoas.
                         * Temos 40 cadeiras e 10 mesas.
                         * Não pode colar nada nas paredes e nem fumar em qualquer área do condomínio.
                         * Me envie a reserva mais os dados completo dos seus convidados com o número do RG ou CPF.'''
 
+        # Condição que trata do terceiro iten oferecido pelo lista de opções do Bot
+        if mensagem == '5':
+            return f''' Precisa de controle ou Tag?
+                        Ligue no número 200 do interfone. '''
 
     # Bot responde as perguntas do usuário
     def responder(self, resposta, chat_id):
@@ -155,5 +160,6 @@ class TelegramBot:
 # Inicializando o Bot
 bot = TelegramBot()
 bot.Iniciar()
+
 
 
