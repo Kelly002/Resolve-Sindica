@@ -66,10 +66,10 @@ class TelegramBot:
 #########################################################
 
         # Mensagem inicial do Bot
-        if eh_primeira_mensagem == True or mensagem.lower() in ('oi', 'olá', 'o', 'bom dia', 'boa tarde', 'boa noite'):
+        if eh_primeira_mensagem == True or mensagem.lower() in ('Na','na','nathy','nathaly','Nathy','Nathaly', 'oi', 'olá', 'o', 'bom dia', 'boa tarde', 'boa noite'):
             return f'''Oi tudo  bem 😃 ?
                     Por favor,  para agilizar digite uma das opções:
-                    1-Fianceiro 🤑
+                    1-Finaceiro 🤑
                     2-Reformas 🛠
                     3-Mudanças 🚚
                     4-Salão de Festas 🎂
@@ -96,10 +96,10 @@ class TelegramBot:
                    7-Sim
                    8-Não'''
         # Condição que trata do primeiro iten oferecido pelo lista de opções do Bot
-        if mensagem == '7':
+        if mensagem == '8':
             return f''' Entre no app e agende a data da reforma. Após reservar, basta dar um print na tela e enviar para mim'''
         # Condição que trata do primeiro iten oferecido pelo lista de opções do Bot
-        if mensagem == '8':
+        if mensagem == '7':
             return f''' Entre em contato com o Engenheiro Miqueias, pois você irá precisar de um ART.'''
 
         # Condição que trata do terceiro iten oferecido pelo lista de opções do Bot
@@ -130,7 +130,7 @@ class TelegramBot:
         if mensagem == '4':
                 return f''' Quer agendar uma data para sua festa?
                         13-Sim
-                        14-Não'''
+                        14- Mais informações sobre o salão'''
 
         # Condição que trata do terceiro iten oferecido pelo lista de opções do Bot
         if mensagem == '13':
@@ -138,7 +138,10 @@ class TelegramBot:
 
         # Condição que trata do terceiro iten oferecido pelo lista de opções do Bot
         if mensagem == '14':
-            return f''' Se você já tem uma data agendada para a sua festa, agora basta enviar o print da tela da reserva, mais a lista de convidados com nome completo e o número do RG ou do CPF. '''
+            return f''' * Lotação máxima é de 60 pessoas.
+                        * Temos 40 cadeiras e 10 mesas.
+                        * Não pode colar nada nas paredes e nem fumar em qualuqer área do condomínio.
+                        * Me envie a reserva mais os dados completo dos seus convidados com o número do RG ou CPF.'''
 
 
     # Bot responde as perguntas do usuário
