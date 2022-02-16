@@ -140,7 +140,7 @@ class TelegramBot:
         if mensagem == '14':
             return f''' * Lotação máxima é de 60 pessoas.
                         * Temos 40 cadeiras e 10 mesas.
-                        * Não pode colar nada nas paredes e nem fumar em qualuqer área do condomínio.
+                        * Não pode colar nada nas paredes e nem fumar em qualquer área do condomínio.
                         * Me envie a reserva mais os dados completo dos seus convidados com o número do RG ou CPF.'''
 
 
