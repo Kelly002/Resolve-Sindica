@@ -80,8 +80,7 @@ class TelegramBot:
         if mensagem == '1':
             return f'''Boleto vencido até  30 dias?:
                     6-Sim 
-                    7-Não 
-                    Digite um dos valores.'''
+                    7-Não  '''
 
         # Condição que trata do primeiro iten oferecido pelo lista de opções do Bot
         if mensagem == '6':
