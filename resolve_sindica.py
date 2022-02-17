@@ -148,8 +148,7 @@ class TelegramBot:
         # Condição que trata do terceiro iten oferecido pelo lista de opções do Bot
         if mensagem == '5':
             return f''' Precisa de controle ou Tag?
-                        Ligue no número 200 do interfone. 
-                        Fone: (19) 99156-5872'''
+                        Ligue no número 200 (interfone) ou pelo telefone (19) 99156-5872'''
 
     # Bot responde as perguntas do usuário
     def responder(self, resposta, chat_id):
