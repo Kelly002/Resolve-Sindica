@@ -66,7 +66,7 @@ class TelegramBot:
 #########################################################
 
         # Mensagem inicial do Bot
-        if eh_primeira_mensagem == True or mensagem.lower() in ('Na','na','nathy','nathaly','Nathy','Nathaly', 'oi', 'olá', 'o', 'bom dia', 'boa tarde', 'boa noite'):
+        if eh_primeira_mensagem == True or mensagem.lower() in ('/start','start','naty','Naty','nat','Nat','Na','na','nathy','nathaly','Nathy','Nathaly', 'oi', 'olá', 'o', 'bom dia', 'boa tarde', 'boa noite'):
             return f'''Oi tudo  bem 😃 ?
                     Por favor,  para agilizar digite uma das opções:
                     1-Financeiro 🤑
